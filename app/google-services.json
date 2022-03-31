@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "565496569977",
+    "project_id": "letsbora-eb4dd",
+    "storage_bucket": "letsbora-eb4dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565496569977:android:d4241c8c8a94a17d8df4a8",
+        "android_client_info": {
+          "package_name": "alexsandro.tcc.letsbora.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565496569977-pcqgk3ri51b8tmfr8nfii294622ph467.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgw6ezLGkN3juhOh17qahleopCmgtNpEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565496569977-pcqgk3ri51b8tmfr8nfii294622ph467.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565496569977:android:b3fab00ea16438ed8df4a8",
+        "android_client_info": {
+          "package_name": "com.alexsandro.tcc02.letsbora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565496569977-l7spig1hhatmet9hb48u9jhna32n7d66.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alexsandro.tcc02.letsbora",
+            "certificate_hash": "a40ce44c0bed053dc54385d26a3e3924afc8dcc6"
+          }
+        },
+        {
+          "client_id": "565496569977-pcqgk3ri51b8tmfr8nfii294622ph467.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgw6ezLGkN3juhOh17qahleopCmgtNpEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565496569977-pcqgk3ri51b8tmfr8nfii294622ph467.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

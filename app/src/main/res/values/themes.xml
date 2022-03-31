@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.LetsBora" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#00a9fd</item>
+        <item name="colorPrimaryVariant">#00a9fd</item>
+        <item name="colorOnPrimary">@color/purple_500</item>
+        <item name="background">@color/btnLogin</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#673AB7</item>
+        <item name="colorSecondaryVariant">#FFEB3B</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
