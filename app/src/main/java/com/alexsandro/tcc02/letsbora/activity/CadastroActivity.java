@@ -144,8 +144,8 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void hideOthersViews(LinearLayout linearLayout){
-//       Toast.makeText(this, "---", Toast.LENGTH_LONG).show();
-    //   Toast.makeText(this, "você está se cadastrando como:" + " " + getTipoUsuarioAtual().name(), Toast.LENGTH_SHORT).show();
+       Toast.makeText(this, "---", Toast.LENGTH_LONG).show();
+           Toast.makeText(this, "você está se cadastrando como:" + " " + getTipoUsuarioAtual().name(), Toast.LENGTH_SHORT).show();
 
 
         for (LinearLayout l : this.listViews){
@@ -184,9 +184,9 @@ public class CadastroActivity extends AppCompatActivity {
         String textoCodigo = campoCodigo.getText().toString();
         String textoInstituicao = campoInstituicao.getText().toString();
 
-        if (!textoNome.isEmpty()){ //verifica nome
-            if (!textoEmail.isEmpty()){ //verifica email
-                if (!textoSenha.isEmpty()){ //verifica senha
+//        if (!textoNome.isEmpty()){ //verifica nome
+//            if (!textoEmail.isEmpty()){ //verifica email
+//                if (!textoSenha.isEmpty()){ //verifica senha
 //                    if (!textoMatricula.isEmpty() /* tipo do usuario */){ //verifica matrícula
 //                    } else {
 //                        Toast.makeText(CadastroActivity.this,
@@ -194,14 +194,14 @@ public class CadastroActivity extends AppCompatActivity {
 //                                Toast.LENGTH_SHORT).show();
 //                    }
 
-//                    criando o objeto usuário
-                    //fazer condições para cada tipo de usuário...////
+                   // criando o objeto usuário
+                   // fazer condições para cada tipo de usuário...////
 //                    Usuario usuario = new Usuario();
 //                    usuario.setNome(textoNome);
 //                    usuario.setEmail(textoEmail);
 //                    usuario.setSenha(textoSenha);
 //                    usuario.setTipo(getTipoUsuarioAtual().tipoUsuario);
-
+//
 //                    cadastrarUsuario(usuario);
 
 
@@ -239,21 +239,21 @@ public class CadastroActivity extends AppCompatActivity {
 
 
 
-                } else {
-                    Toast.makeText(CadastroActivity.this,
-                            "Preencha a senha!",
-                            Toast.LENGTH_SHORT).show();
-                }
-            } else {
-                Toast.makeText(CadastroActivity.this,
-                        "Preencha o email!",
-                        Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            Toast.makeText(CadastroActivity.this,
-                    "Preencha o nome!",
-                    Toast.LENGTH_SHORT).show();
-        }
+//                } else {
+//                    Toast.makeText(CadastroActivity.this,
+//                            "Preencha a senha!",
+//                            Toast.LENGTH_SHORT).show();
+//                }
+//            } else {
+//                Toast.makeText(CadastroActivity.this,
+//                        "Preencha o email!",
+//                        Toast.LENGTH_SHORT).show();
+//            }
+//        } else {
+//            Toast.makeText(CadastroActivity.this,
+//                    "Preencha o nome!",
+//                    Toast.LENGTH_SHORT).show();
+//        }
 
     }
 
@@ -275,45 +275,16 @@ public class CadastroActivity extends AppCompatActivity {
                     usuario.salvar();
 
 
-//                    Usuario usuario = new Usuario();
-//                    Passageiro passageiro = new Passageiro();
-//                    Motorista motorista = new Motorista();
-//                    Administrador administrador = new Administrador();
-//
-//                    RepositorioUsuario repositorioUsuario = new RepositorioUsuario();
-//                    repositorioUsuario.salvarUsuario(motorista);
-//                    repositorioUsuario.salvarUsuario(passageiro);
-//                    repositorioUsuario.salvarUsuario(administrador);
-//
-//                    DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
-//                    DatabaseReference databaseReference = firebaseRef.child("usuarios");
-//
-//
-//
-//                    Map<String, Usuario> usuarios = new HashMap<>();
-//                    usuarios.put(String.valueOf(usuario.getId()), usuario);
-//                    usuarios.put(String.valueOf(passageiro.getId()), passageiro);
-//                    usuarios.put(String.valueOf(motorista.getId()), motorista);
-//
-//
-//                    databaseReference.setValue(usuarios);
+                    Usuario usuario = new Usuario();
+                    Passageiro passageiro = new Passageiro();
+                    Motorista motorista = new Motorista();
+                    Administrador administrador = new Administrador();
 
-//                    DatabaseReference ref = ConfiguracaoFirebase.getFirebaseDatabase();
-//                    DatabaseReference databaseReference = ref.child("nome_tabela");
-//
-//                    Usuario usuario = new Usuario();
-//                    Passageiro passageiro = new Passageiro();
-//                    Motorista motorista = new Motorista();
-//
-//                    RepositorioUsuario repositorioUsuario = new RepositorioUsuario();
-//                    repositorioUsuario.salvarUsuario(motorista);
-//                    repositorioUsuario.salvarUsuario(passageiro);
-//
+                    DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
+                    DatabaseReference databaseReference = firebaseRef.child("usuarios");
+
+
 //                    Map<String, Usuario> usuarios = new HashMap<>();
-//
-//                    for (Usuario u: repositorioUsuario.getRepositorioUsuarios()){
-//                        usuarios.put(String.valueOf(u.getId()), u);
-//                    }
 //
 //                    databaseReference.setValue(usuarios);
 
@@ -324,10 +295,9 @@ public class CadastroActivity extends AppCompatActivity {
 
     }
 
-//
-//                    Toast.makeText(CadastroActivity.this,
+
+//    Toast.makeText(CadastroActivity.this,
 //            "Sucesso ao cadastrar Usuário!",
-//    Toast.LENGTH_SHORT).show();
+//             Toast.LENGTH_SHORT).show();
 
 }
-
