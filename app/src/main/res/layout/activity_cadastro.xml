@@ -8,11 +8,12 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout4"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,16 +22,18 @@
             android:id="@+id/editCadastroNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="  Digite seu nome completo" />
+            android:hint="Digite seu nome completo" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout5"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
@@ -39,15 +42,17 @@
             android:id="@+id/editCadastroEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="  Digite seu e-mail" />
+            android:hint="Digite seu e-mail" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout7"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
@@ -56,7 +61,7 @@
             android:id="@+id/editCadastroSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="  Digite sua senha"
+            android:hint="Digite sua senha"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,8 +117,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="409dp"
-        android:layout_height="100dp"
+        android:layout_width="380dp"
+        android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
@@ -134,11 +139,10 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editCadastroMatricula"
+                    android:id="@+id/editCadastroCurso"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="  Matricula" />
-
+                    android:hint="Curso" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -146,10 +150,10 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editCadastroCurso"
+                    android:id="@+id/editCadastroMatricula"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="  Curso" />
+                    android:hint="Matricula" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -167,11 +171,10 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editCadastroCNH"
+                    android:id="@+id/editCadastroValidade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="  CNH" />
-
+                    android:hint="Validade da CNH" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -179,10 +182,10 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editCadastroValidade"
+                    android:id="@+id/editCadastroCNH"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="  Validade da CNH" />
+                    android:hint="CNH" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -200,11 +203,10 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editCadastroCodigo"
+                    android:id="@+id/editCadastroInstituicao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="  Código do funcionário" />
-
+                    android:hint="Instituição" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -212,10 +214,10 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editCadastroInstituicao"
+                    android:id="@+id/editCadastroCodigo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="  Instituição" />
+                    android:hint="Código do funcionário" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -227,6 +229,7 @@
         android:id="@+id/buttonCadastrar"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@color/botap"
         android:onClick="validarCadastroUsuario"
         android:text="Cadastrar"

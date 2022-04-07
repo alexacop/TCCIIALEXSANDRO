@@ -63,9 +63,6 @@ public class CadastroActivity extends AppCompatActivity {
 
     private FirebaseAuth autenticacao;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,10 +141,6 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void hideOthersViews(LinearLayout linearLayout){
-       Toast.makeText(this, "---", Toast.LENGTH_LONG).show();
-           Toast.makeText(this, "você está se cadastrando como:" + " " + getTipoUsuarioAtual().name(), Toast.LENGTH_SHORT).show();
-
-
         for (LinearLayout l : this.listViews){
             if(l.equals(linearLayout)){
                 // show
@@ -158,6 +151,8 @@ public class CadastroActivity extends AppCompatActivity {
                 l.setVisibility(View.GONE);
             }
         }
+        Toast.makeText(this, "Você está se cadastrando como:" + " " + getTipoUsuarioAtual().name(),
+                Toast.LENGTH_SHORT).show();
     }
 
     private void hideButtonViews (Button button) { //
@@ -184,82 +179,65 @@ public class CadastroActivity extends AppCompatActivity {
         String textoCodigo = campoCodigo.getText().toString();
         String textoInstituicao = campoInstituicao.getText().toString();
 
-//        if (!textoNome.isEmpty()){ //verifica nome
-//            if (!textoEmail.isEmpty()){ //verifica email
-//                if (!textoSenha.isEmpty()){ //verifica senha
-//                    if (!textoMatricula.isEmpty() /* tipo do usuario */){ //verifica matrícula
-//                    } else {
-//                        Toast.makeText(CadastroActivity.this,
-//                                "Preencha o nome!",
-//                                Toast.LENGTH_SHORT).show();
-//                    }
+    if (getTipoUsuarioAtual().tipoUsuario == "PASSAGEIRO") {
+        if (!textoMatricula.isEmpty() && !textoCurso.isEmpty() && !textoNome.isEmpty() &&
+                !textoEmail.isEmpty() && !textoSenha.isEmpty()){ //verifica matrícula
+            Passageiro passageiro = new Passageiro();
+            passageiro.setNome(textoNome);
+            passageiro.setEmail(textoEmail);
+            passageiro.setSenha(textoSenha);
+            passageiro.setMatricula(textoMatricula);
+            passageiro.setCurso(textoCurso);
+            passageiro.setTipo(getTipoUsuarioAtual().tipoUsuario);
 
-                   // criando o objeto usuário
-                   // fazer condições para cada tipo de usuário...////
-//                    Usuario usuario = new Usuario();
-//                    usuario.setNome(textoNome);
-//                    usuario.setEmail(textoEmail);
-//                    usuario.setSenha(textoSenha);
-//                    usuario.setTipo(getTipoUsuarioAtual().tipoUsuario);
-//
-//                    cadastrarUsuario(usuario);
-
-
-                    //daquiiiiiiiiiii
-
-                    if (getTipoUsuarioAtual().tipoUsuario == "PASSAGEIRO") {
-                        Passageiro passageiro = new Passageiro();
-                        passageiro.setNome(textoNome);
-                        passageiro.setEmail(textoEmail);
-                        passageiro.setSenha(textoSenha);
-                        passageiro.setMatricula(textoMatricula);
-                        passageiro.setCurso(textoCurso);
-                        passageiro.setTipo(getTipoUsuarioAtual().tipoUsuario);
-
-
-                        cadastrarUsuario(passageiro);
-                    }
-
-
-                    if (getTipoUsuarioAtual().tipoUsuario == "MOTORISTA") {
-                        Motorista motorista = new Motorista();
-                        motorista.setNome(textoNome);
-                        motorista.setEmail(textoEmail);
-                        motorista.setSenha(textoSenha);
-                        motorista.setCnh(textoCNH);
-                        motorista.setValidade(textoValidade);
-                        motorista.setTipo(getTipoUsuarioAtual().tipoUsuario);
-
-
-                        cadastrarUsuario(motorista);
-                    }
-
-
-                    //aquuiiiii
-
-
-
-//                } else {
-//                    Toast.makeText(CadastroActivity.this,
-//                            "Preencha a senha!",
-//                            Toast.LENGTH_SHORT).show();
-//                }
-//            } else {
-//                Toast.makeText(CadastroActivity.this,
-//                        "Preencha o email!",
-//                        Toast.LENGTH_SHORT).show();
-//            }
-//        } else {
-//            Toast.makeText(CadastroActivity.this,
-//                    "Preencha o nome!",
-//                    Toast.LENGTH_SHORT).show();
-//        }
-
+            cadastrarUsuario(passageiro);
+        } else {
+            Toast.makeText(CadastroActivity.this,
+                    "Preencha os dados do PASSAGEIRO!",
+                    Toast.LENGTH_SHORT).show();
+          }
     }
 
+    if (getTipoUsuarioAtual().tipoUsuario == "MOTORISTA") {
+        if (!textoCNH.isEmpty() && !textoValidade.isEmpty() && !textoNome.isEmpty() &&
+                !textoEmail.isEmpty() && !textoSenha.isEmpty()) { //verifica matrícula
+            Motorista motorista = new Motorista();
+            motorista.setNome(textoNome);
+            motorista.setEmail(textoEmail);
+            motorista.setSenha(textoSenha);
+            motorista.setCnh(textoCNH);
+            motorista.setValidade(textoValidade);
+            motorista.setTipo(getTipoUsuarioAtual().tipoUsuario);
+
+            cadastrarUsuario(motorista);
+        } else {
+            Toast.makeText(CadastroActivity.this,
+                    "Preencha os dados do MOTORISTA!",
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
+        if (getTipoUsuarioAtual().tipoUsuario == "ADMINISTRADOR") {
+            if (!textoInstituicao.isEmpty() && !textoCodigo.isEmpty() && !textoNome.isEmpty() &&
+                    !textoEmail.isEmpty() && !textoSenha.isEmpty()) { //verifica matrícula
+                Administrador administrador = new Administrador();
+                administrador.setNome(textoNome);
+                administrador.setEmail(textoEmail);
+                administrador.setSenha(textoSenha);
+                administrador.setCodigo(textoCodigo);
+                administrador.setInstituicao(textoInstituicao);
+                administrador.setTipo(getTipoUsuarioAtual().tipoUsuario);
+
+                cadastrarUsuario(administrador);
+            } else {
+                Toast.makeText(CadastroActivity.this,
+                        "Preencha os dados do ADMINISTRADOR!",
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 
     public void cadastrarUsuario(Usuario usuario){
-
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         autenticacao.createUserWithEmailAndPassword(
                 usuario.getEmail(),
@@ -274,30 +252,15 @@ public class CadastroActivity extends AppCompatActivity {
                     usuario.setId( idUsuario );
                     usuario.salvar();
 
-
-                    Usuario usuario = new Usuario();
-                    Passageiro passageiro = new Passageiro();
-                    Motorista motorista = new Motorista();
-                    Administrador administrador = new Administrador();
-
                     DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
                     DatabaseReference databaseReference = firebaseRef.child("usuarios");
 
-
-//                    Map<String, Usuario> usuarios = new HashMap<>();
-//
-//                    databaseReference.setValue(usuarios);
-
-
+                    Toast.makeText(CadastroActivity.this,
+                            "Sucesso ao cadastrar Usuário!",
+                             Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
     }
-
-
-//    Toast.makeText(CadastroActivity.this,
-//            "Sucesso ao cadastrar Usuário!",
-//             Toast.LENGTH_SHORT).show();
-
 }
+
