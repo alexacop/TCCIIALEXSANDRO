@@ -16,7 +16,7 @@ public class Usuario implements Serializable {
 
     public Usuario() {
     }
-//
+
     public void salvar(){
         DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
         DatabaseReference usuarios = firebaseRef.child("usuarios").child(getTipo()).child(getId());
@@ -27,32 +27,26 @@ public class Usuario implements Serializable {
     //getter and setters begin
 
     public String getId() {
-
         return id;
     }
 
     public void setId(String id) {
-
         this.id = id;
     }
 
     public String getNome() {
-
         return nome;
     }
 
     public void setNome(String nome) {
-
         this.nome = nome;
     }
 
     public String getEmail() {
-
         return email;
     }
 
     public void setEmail(String email) {
-
         this.email = email;
     }
 
@@ -61,18 +55,15 @@ public class Usuario implements Serializable {
     }
 
     public void setTipo(String tipo) {
-
         this.tipo = tipo;
     }
 
     @Exclude
     public String getSenha() {
-
         return senha;
     }
 
     public void setSenha(String senha) {
-
         this.senha = senha;
     }
 
