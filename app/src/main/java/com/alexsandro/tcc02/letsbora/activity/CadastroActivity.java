@@ -262,9 +262,6 @@ public class CadastroActivity extends AppCompatActivity {
                       //atualizar o nome no Userprofile
                         UsuarioFirebase.atualizarNomeUsuario(usuario.getNome());
 
-//                    DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
-//                    DatabaseReference databaseReference = firebaseRef.child("usuarios");
-
                         if(getTipoUsuarioAtual().tipoUsuario == "PASSAGEIRO"){
                             startActivity(new Intent(CadastroActivity.this, PassageiroActivity.class));
                             finish();
@@ -313,7 +310,7 @@ public class CadastroActivity extends AppCompatActivity {
                             excecao,
                             Toast.LENGTH_SHORT).show();
                 }
-            } // não é do else
+            }
         });
     }
 }
