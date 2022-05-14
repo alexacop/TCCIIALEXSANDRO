@@ -50,7 +50,7 @@ public class Usuario implements Serializable {
         this.email = email;
     }
 
-    public String getTipo() {
+    public String getTipo(){
         return tipo;
     }
 
@@ -70,9 +70,9 @@ public class Usuario implements Serializable {
     //getter and setters End
 
 
-//    private TipoUsuario tipoUsuario;
-//
-//    public Usuario(TipoUsuario tipoUsuario){
-//        this.tipoUsuario = tipoUsuario;
-//    }
+    private TipoUsuario tipoUsuario;
+
+    public Usuario(TipoUsuario tipoUsuario){
+        this.tipoUsuario = tipoUsuario;
+    }
 }

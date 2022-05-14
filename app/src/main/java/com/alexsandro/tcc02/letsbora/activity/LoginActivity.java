@@ -81,6 +81,9 @@ public class LoginActivity extends AppCompatActivity {
                     //verifica o tipo de usuario logado
                     UsuarioFirebase.redirecionaUsuarioLogado(LoginActivity.this);
 
+//                    Toast.makeText(LoginActivity.this,
+//                            "oiii"+ usuario.getEmail(),
+//                            Toast.LENGTH_SHORT).show();
 
                 }else {
 
@@ -92,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
                     }catch ( FirebaseAuthInvalidCredentialsException e ){
                         excecao = "E-mail e senha não correspondem a um usuario cadastrado.";
                     }catch (Exception e){
-                        excecao = "Erro ao entrar: " + e.getMessage();
+                        excecao = "Erro ao cadastrar usuário: " + e.getMessage();
                         e.printStackTrace();
                     }
                     Toast.makeText(LoginActivity.this,

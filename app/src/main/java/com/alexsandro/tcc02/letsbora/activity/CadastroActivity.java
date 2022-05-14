@@ -108,12 +108,11 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private TipoUsuario getTipoUsuarioAtual(){
+
         return this.tipoUsuario;
     }
 
-
     private void loadComponents() {
-        radioGroup = findViewById(R.id.radioGroup);
 
         linearLayoutPassageiro = findViewById(R.id.formulariopassageiro);
         linearLayoutMotorista = findViewById(R.id.formulariomotorista);
@@ -142,6 +141,7 @@ public class CadastroActivity extends AppCompatActivity {
         campoValidade = findViewById(R.id.editCadastroValidade);
         campoCodigo = findViewById(R.id.editCadastroCodigo);
         campoInstituicao = findViewById(R.id.editCadastroInstituicao);
+        radioGroup = findViewById(R.id.radioGroup);
 
     }
 
@@ -270,8 +270,8 @@ public class CadastroActivity extends AppCompatActivity {
                                     "Sucesso ao cadastrar Passageiro!",
                                     Toast.LENGTH_SHORT).show();
 
-                        } if (getTipoUsuarioAtual().tipoUsuario == "MOTORISTA") {
-                            startActivity(new Intent(CadastroActivity.this, MapsActivity.class));
+                        } else if (getTipoUsuarioAtual().tipoUsuario == "MOTORISTA") {
+                            startActivity(new Intent(CadastroActivity.this, MotoristaActivity.class));
                             finish();
 
                             Toast.makeText(CadastroActivity.this,
@@ -312,6 +312,18 @@ public class CadastroActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    //TESTE
+    public String verificaTipoUsuario() {
+        if (radioButtonAdm.isSelected()) {
+            return "ADMINISTRADOR";
+        } else if (radioButtonMotorista.isSelected()){
+            return "MOTORISTA";
+
+        } else {
+            return "PASSAGEIRO";
+        }
     }
 }
 
